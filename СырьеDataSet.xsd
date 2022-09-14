@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="СырьеDataSet" targetNamespace="http://tempuri.org/СырьеDataSet.xsd" xmlns:mstns="http://tempuri.org/СырьеDataSet.xsd" xmlns="http://tempuri.org/СырьеDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" GeneratorFunctionsComponentClassName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" UserFunctionsComponentName="QueriesTableAdapter" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="СырьеConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="СырьеConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.MDI_Raw_Material.Properties.Settings.GlobalReference.Default.СырьеConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ViewСписокСырьяTableAdapter" GeneratorDataComponentClassName="ViewСписокСырьяTableAdapter" Name="ViewСписокСырья" UserDataComponentName="ViewСписокСырьяTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="СырьеConnectionString (Settings)" DbObjectName="Сырье.dbo.ViewСписокСырья" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Код_сырья, Наименование_сырья FROM dbo.ViewСписокСырья</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Код_сырья" DataSetColumn="Код_сырья" />
+              <Mapping SourceColumn="Наименование_сырья" DataSetColumn="Наименование_сырья" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_Поступление_сырья_с наименованиемTableAdapter" GeneratorDataComponentClassName="View_Поступление_сырья_с_наименованиемTableAdapter" Name="View_Поступление_сырья_с наименованием" UserDataComponentName="View_Поступление_сырья_с наименованиемTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="СырьеConnectionString (Settings)" DbObjectName="Сырье.dbo.[View_Поступление_сырья_с наименованием]" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Код_поставки, Код_сырья, Наименование_сырья, Плановое_поступление, Фактическое_поступление FROM dbo.[View_Поступление_сырья_с наименованием]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Код_поставки" DataSetColumn="Код_поставки" />
+              <Mapping SourceColumn="Код_сырья" DataSetColumn="Код_сырья" />
+              <Mapping SourceColumn="Наименование_сырья" DataSetColumn="Наименование_сырья" />
+              <Mapping SourceColumn="Плановое_поступление" DataSetColumn="Плановое_поступление" />
+              <Mapping SourceColumn="Фактическое_поступление" DataSetColumn="Фактическое_поступление" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="View_Прошлый_год_с наименованиемTableAdapter" GeneratorDataComponentClassName="View_Прошлый_год_с_наименованиемTableAdapter" Name="View_Прошлый_год_с наименованием" UserDataComponentName="View_Прошлый_год_с наименованиемTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="СырьеConnectionString (Settings)" DbObjectName="Сырье.dbo.[View_Прошлый_год_с наименованием]" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT Код, Код_сырья, Наименование_сырья, Поступление_за_прошлый_год FROM dbo.[View_Прошлый_год_с наименованием]</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Код" DataSetColumn="Код" />
+              <Mapping SourceColumn="Код_сырья" DataSetColumn="Код_сырья" />
+              <Mapping SourceColumn="Наименование_сырья" DataSetColumn="Наименование_сырья" />
+              <Mapping SourceColumn="Поступление_за_прошлый_год" DataSetColumn="Поступление_за_прошлый_год" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources>
+          <DbSource ConnectionRef="СырьеConnectionString (Settings)" DbObjectName="Сырье.dbo.ПоступлениеСырья_Delete" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ПоступлениеСырья_Delete" MethodsParameterType="CLR" Modifier="Public" Name="ПоступлениеСырья_Delete" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="ПоступлениеСырья_Delete">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.ПоступлениеСырья_Delete</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdOfAdmission" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="СырьеConnectionString (Settings)" DbObjectName="Сырье.dbo.ПоступлениеСырья_Insert" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ПоступлениеСырья_Insert" MethodsParameterType="CLR" Modifier="Public" Name="ПоступлениеСырья_Insert" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy1" UserSourceName="ПоступлениеСырья_Insert">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.ПоступлениеСырья_Insert</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdOfRawMaterial" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@PlannedAdmission" Precision="53" ProviderType="Float" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@ActualAdmission" Precision="53" ProviderType="Float" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="СырьеConnectionString (Settings)" DbObjectName="Сырье.dbo.ПоступлениеСырья_Update" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ПоступлениеСырья_Update" MethodsParameterType="CLR" Modifier="Public" Name="ПоступлениеСырья_Update" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy2" UserSourceName="ПоступлениеСырья_Update">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.ПоступлениеСырья_Update</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdOfAdmission" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdOfRawMaterial" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@PlannedAdmission" Precision="53" ProviderType="Float" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@ActualAdmission" Precision="53" ProviderType="Float" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="СырьеConnectionString (Settings)" DbObjectName="Сырье.dbo.ПрошлыйГод_Delete" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ПрошлыйГод_Delete" MethodsParameterType="CLR" Modifier="Public" Name="ПрошлыйГод_Delete" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy3" UserSourceName="ПрошлыйГод_Delete">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.ПрошлыйГод_Delete</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdOfAdmissionForLastYear" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="СырьеConnectionString (Settings)" DbObjectName="Сырье.dbo.ПрошлыйГод_Insert" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ПрошлыйГод_Insert" MethodsParameterType="CLR" Modifier="Public" Name="ПрошлыйГод_Insert" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy4" UserSourceName="ПрошлыйГод_Insert">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.ПрошлыйГод_Insert</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdOfRawMaterial" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@AdmissionForLastYear" Precision="53" ProviderType="Float" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="СырьеConnectionString (Settings)" DbObjectName="Сырье.dbo.ПрошлыйГод_Update" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="ПрошлыйГод_Update" MethodsParameterType="CLR" Modifier="Public" Name="ПрошлыйГод_Update" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy5" UserSourceName="ПрошлыйГод_Update">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.ПрошлыйГод_Update</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdOfAdmissionForLastYear" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdOfRawMaterial" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="float" DbType="Double" Direction="Input" ParameterName="@AdmissionForLastYear" Precision="53" ProviderType="Float" Scale="0" Size="8" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="СырьеConnectionString (Settings)" DbObjectName="Сырье.dbo.СписокСырья_Delete" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="СписокСырья_Delete" MethodsParameterType="CLR" Modifier="Public" Name="СписокСырья_Delete" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy6" UserSourceName="СписокСырья_Delete">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.СписокСырья_Delete</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdOfRawMaterial" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="СырьеConnectionString (Settings)" DbObjectName="Сырье.dbo.СписокСырья_Insert" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="СписокСырья_Insert" MethodsParameterType="CLR" Modifier="Public" Name="СписокСырья_Insert" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy7" UserSourceName="СписокСырья_Insert">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.СписокСырья_Insert</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@NameOfRawMaterial" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+          <DbSource ConnectionRef="СырьеConnectionString (Settings)" DbObjectName="Сырье.dbo.СписокСырья_Update" DbObjectType="StoredProcedure" GenerateShortCommands="true" GeneratorSourceName="СписокСырья_Update" MethodsParameterType="CLR" Modifier="Public" Name="СписокСырья_Update" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy8" UserSourceName="СписокСырья_Update">
+            <SelectCommand>
+              <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                <CommandText>dbo.СписокСырья_Update</CommandText>
+                <Parameters>
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@IdOfRawMaterial" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                  <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="nvarchar" DbType="String" Direction="Input" ParameterName="@NameOfRawMaterial" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumnNullMapping="false" SourceVersion="Current" />
+                </Parameters>
+              </DbCommand>
+            </SelectCommand>
+          </DbSource>
+        </Sources>
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="СырьеDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="СырьеDataSet" msprop:Generator_UserDSName="СырьеDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ViewСписокСырья" msprop:Generator_TableClassName="ViewСписокСырьяDataTable" msprop:Generator_TableVarName="tableViewСписокСырья" msprop:Generator_TablePropName="ViewСписокСырья" msprop:Generator_RowDeletingName="ViewСписокСырьяRowDeleting" msprop:Generator_RowChangingName="ViewСписокСырьяRowChanging" msprop:Generator_RowEvHandlerName="ViewСписокСырьяRowChangeEventHandler" msprop:Generator_RowDeletedName="ViewСписокСырьяRowDeleted" msprop:Generator_UserTableName="ViewСписокСырья" msprop:Generator_RowChangedName="ViewСписокСырьяRowChanged" msprop:Generator_RowEvArgName="ViewСписокСырьяRowChangeEvent" msprop:Generator_RowClassName="ViewСписокСырьяRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Код_сырья" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnКод_сырья" msprop:Generator_ColumnPropNameInRow="Код_сырья" msprop:Generator_ColumnPropNameInTable="Код_сырьяColumn" msprop:Generator_UserColumnName="Код_сырья" type="xs:int" />
+              <xs:element name="Наименование_сырья" msprop:Generator_ColumnVarNameInTable="columnНаименование_сырья" msprop:Generator_ColumnPropNameInRow="Наименование_сырья" msprop:Generator_ColumnPropNameInTable="Наименование_сырьяColumn" msprop:Generator_UserColumnName="Наименование_сырья" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Поступление_сырья_с_x0020_наименованием" msprop:Generator_TableClassName="View_Поступление_сырья_с_наименованиемDataTable" msprop:Generator_TableVarName="tableView_Поступление_сырья_с_наименованием" msprop:Generator_RowChangedName="View_Поступление_сырья_с_наименованиемRowChanged" msprop:Generator_TablePropName="View_Поступление_сырья_с_наименованием" msprop:Generator_RowDeletingName="View_Поступление_сырья_с_наименованиемRowDeleting" msprop:Generator_RowChangingName="View_Поступление_сырья_с_наименованиемRowChanging" msprop:Generator_RowEvHandlerName="View_Поступление_сырья_с_наименованиемRowChangeEventHandler" msprop:Generator_RowDeletedName="View_Поступление_сырья_с_наименованиемRowDeleted" msprop:Generator_RowClassName="View_Поступление_сырья_с_наименованиемRow" msprop:Generator_UserTableName="View_Поступление_сырья_с наименованием" msprop:Generator_RowEvArgName="View_Поступление_сырья_с_наименованиемRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Код_поставки" msprop:Generator_ColumnVarNameInTable="columnКод_поставки" msprop:Generator_ColumnPropNameInRow="Код_поставки" msprop:Generator_ColumnPropNameInTable="Код_поставкиColumn" msprop:Generator_UserColumnName="Код_поставки" type="xs:int" />
+              <xs:element name="Код_сырья" msprop:Generator_ColumnVarNameInTable="columnКод_сырья" msprop:Generator_ColumnPropNameInRow="Код_сырья" msprop:Generator_ColumnPropNameInTable="Код_сырьяColumn" msprop:Generator_UserColumnName="Код_сырья" type="xs:int" />
+              <xs:element name="Наименование_сырья" msprop:Generator_ColumnVarNameInTable="columnНаименование_сырья" msprop:Generator_ColumnPropNameInRow="Наименование_сырья" msprop:Generator_ColumnPropNameInTable="Наименование_сырьяColumn" msprop:Generator_UserColumnName="Наименование_сырья" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Плановое_поступление" msprop:Generator_ColumnVarNameInTable="columnПлановое_поступление" msprop:Generator_ColumnPropNameInRow="Плановое_поступление" msprop:Generator_ColumnPropNameInTable="Плановое_поступлениеColumn" msprop:Generator_UserColumnName="Плановое_поступление" type="xs:double" minOccurs="0" />
+              <xs:element name="Фактическое_поступление" msprop:Generator_ColumnVarNameInTable="columnФактическое_поступление" msprop:Generator_ColumnPropNameInRow="Фактическое_поступление" msprop:Generator_ColumnPropNameInTable="Фактическое_поступлениеColumn" msprop:Generator_UserColumnName="Фактическое_поступление" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="View_Прошлый_год_с_x0020_наименованием" msprop:Generator_TableClassName="View_Прошлый_год_с_наименованиемDataTable" msprop:Generator_TableVarName="tableView_Прошлый_год_с_наименованием" msprop:Generator_RowChangedName="View_Прошлый_год_с_наименованиемRowChanged" msprop:Generator_TablePropName="View_Прошлый_год_с_наименованием" msprop:Generator_RowDeletingName="View_Прошлый_год_с_наименованиемRowDeleting" msprop:Generator_RowChangingName="View_Прошлый_год_с_наименованиемRowChanging" msprop:Generator_RowEvHandlerName="View_Прошлый_год_с_наименованиемRowChangeEventHandler" msprop:Generator_RowDeletedName="View_Прошлый_год_с_наименованиемRowDeleted" msprop:Generator_RowClassName="View_Прошлый_год_с_наименованиемRow" msprop:Generator_UserTableName="View_Прошлый_год_с наименованием" msprop:Generator_RowEvArgName="View_Прошлый_год_с_наименованиемRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Код" msprop:Generator_ColumnVarNameInTable="columnКод" msprop:Generator_ColumnPropNameInRow="Код" msprop:Generator_ColumnPropNameInTable="КодColumn" msprop:Generator_UserColumnName="Код" type="xs:int" />
+              <xs:element name="Код_сырья" msprop:Generator_ColumnVarNameInTable="columnКод_сырья" msprop:Generator_ColumnPropNameInRow="Код_сырья" msprop:Generator_ColumnPropNameInTable="Код_сырьяColumn" msprop:Generator_UserColumnName="Код_сырья" type="xs:int" />
+              <xs:element name="Наименование_сырья" msprop:Generator_ColumnVarNameInTable="columnНаименование_сырья" msprop:Generator_ColumnPropNameInRow="Наименование_сырья" msprop:Generator_ColumnPropNameInTable="Наименование_сырьяColumn" msprop:Generator_UserColumnName="Наименование_сырья" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Поступление_за_прошлый_год" msprop:Generator_ColumnVarNameInTable="columnПоступление_за_прошлый_год" msprop:Generator_ColumnPropNameInRow="Поступление_за_прошлый_год" msprop:Generator_ColumnPropNameInTable="Поступление_за_прошлый_годColumn" msprop:Generator_UserColumnName="Поступление_за_прошлый_год" type="xs:double" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ViewСписокСырья" />
+      <xs:field xpath="mstns:Код_сырья" />
+    </xs:unique>
+    <xs:unique name="View_Поступление_сырья_с_x0020_наименованием_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Поступление_сырья_с_x0020_наименованием" />
+      <xs:field xpath="mstns:Код_поставки" />
+    </xs:unique>
+    <xs:unique name="View_Прошлый_год_с_x0020_наименованием_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:View_Прошлый_год_с_x0020_наименованием" />
+      <xs:field xpath="mstns:Код" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
